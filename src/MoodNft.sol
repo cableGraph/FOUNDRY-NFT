@@ -51,7 +51,6 @@ contract MoodNft is ERC721 {
     function tokenURI(
         uint256 tokenId
     ) public view override returns (string memory) {
-        // ✅ Verify that token exists
         if (!_isTokenExisting(tokenId)) {
             revert("ERC721: invalid token ID");
         }

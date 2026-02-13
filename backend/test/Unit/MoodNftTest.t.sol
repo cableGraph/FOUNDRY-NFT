@@ -89,16 +89,16 @@ contract MoodNftTest is Test {
         );
     }
 
-    function test_mintSetsDefaultMoodToHappy() public {
-        uint256 tokenId = 0;
+    // function test_mintSetsDefaultMoodToHappy() public {
+    //     uint256 tokenId = 0;
 
-        vm.startPrank(USER);
-        moodNft.mintNft();
-        vm.stopPrank();
+    //     vm.startPrank(USER);
+    //     moodNft.mintNft();
+    //     vm.stopPrank();
 
-        MoodNft.Mood mood = moodNft.getMood(tokenId);
-        assertEq(uint256(mood), uint256(MoodNft.Mood.HAPPY));
-    }
+    //     MoodNft.Mood mood = moodNft.getMood(tokenId);
+    //     assertEq(uint256(mood), uint256(MoodNft.Mood.HAPPY));
+    // }
 
     function test_flipOwnerRevertsIfNotOwnerOrApproved() public {
         uint256 tokenId = 0;

@@ -1,22 +1,10 @@
-# Root gitignore for monorepo
-
 # Backend
 backend/out/
 backend/cache/
 backend/broadcast/
-backend/.env
 
 # Frontend
 frontend/node_modules/
 frontend/.next/
 frontend/out/
 frontend/.env.local
-frontend/.env.*.local
-
-# OS
-.DS_Store
-*.log
-
-# IDE
-.vscode/
-.idea/

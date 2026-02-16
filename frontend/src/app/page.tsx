@@ -1,9 +1,10 @@
-import Image from "next/image";
+import AirdropForm from "./components/AirdropForm"
 
 export default function Home() {
   return (
     <div >
-      Hi
+      <AirdropForm />
+      Hi From CableGraph
     </div>
   );
 }

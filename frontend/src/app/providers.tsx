@@ -2,7 +2,7 @@
 
 import { type ReactNode, useState, useEffect } from "react"
 import { WagmiProvider } from "wagmi"
-import { RainbowKitProvider, ConnectButton } from "@rainbow-me/rainbowkit"
+import { RainbowKitProvider } from "@rainbow-me/rainbowkit"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import "@rainbow-me/rainbowkit/styles.css"
 
@@ -20,15 +20,14 @@ export function Providers(props: { children: ReactNode }) {
     }, [])
 
     if (!mounted || !config) {
-        return <>{props.children}</>
+        return null
     }
 
     return (
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>
                 <RainbowKitProvider>
-                    <ConnectButton />
-                    {props.children}
+                    {props.children} {/* Now children render WITH providers */}
                 </RainbowKitProvider>
             </QueryClientProvider>
         </WagmiProvider>

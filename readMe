@@ -1,0 +1,5 @@
+setup: pnpm create next-app@latest
+local server: pnpm run dev
+rainbowkit for wallet connect: pnpm add @rainbow-me/rainbowkit@latest
+rainbowkit alliance: pnpm add wagmi viem@2.x @tanstack/react-query
+how will i make the app folder into src. i want to have app in src, i dont have src / app structure: mkdir src...mv app src/
